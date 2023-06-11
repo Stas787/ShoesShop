@@ -1,0 +1,9 @@
+﻿<h3>@Model.CurrentCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach(Shoes shoes in Model.AllShoes)
+        {
+            @Html.Partial("AllShoes", shoes)
+        }
+    }
+</div>

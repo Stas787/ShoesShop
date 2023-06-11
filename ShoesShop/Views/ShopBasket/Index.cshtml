@@ -1,0 +1,15 @@
+﻿@using ShoesShop.ViewModels
+@using ShoesShop.Models
+
+@model ShopBasketViewModel
+<div class="container">
+    @foreach(ShopShoesItem element in Model.ShopBasketView.ListShopItems)
+    {
+        <div class="alert alert-warning mt-5">
+            <b>Shoes:</b>@element.Shoes.Name <br />
+            <b>Price:</b>@element.Shoes.Price.ToString()
+        </div>
+    }
+    <hr />
+    <a class="btn btn-danger" asp-controller="Order" asp-action="Checkout">Pay</a>
+</div>
