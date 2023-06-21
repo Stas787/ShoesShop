@@ -11,9 +11,13 @@ namespace ShoesShop
         }
 
         public DbSet<Shoes> Shoes { get; set; }
+
         public DbSet<Category> Category { get; set; }
+
         public DbSet<ShopShoesItem> ShopShoesItem { get; set; }
+
         public DbSet<Order> Order { get; set; }
+
         public DbSet<OrderDetail> OrderDetail { get; set; }
     }
 }

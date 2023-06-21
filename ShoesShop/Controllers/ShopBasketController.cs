@@ -8,6 +8,7 @@ namespace ShoesShop.Controllers
     public class ShopBasketController : Controller
     {
         private readonly IAllShoes ShoesRepository;
+
         private readonly ShopBasket ShopBasket;
         
         public ShopBasketController(IAllShoes shoesRepository, ShopBasket shopBasket)

@@ -11,6 +11,7 @@ namespace WebApplicationPractice.Controllers
     public class ShoesController : Controller
     {
         private readonly IAllShoes AllShoes;
+
         public readonly IShoesCategory ShoesCategory;
 
         public ShoesController(IAllShoes iAllShoes, IShoesCategory iShoesCategory)

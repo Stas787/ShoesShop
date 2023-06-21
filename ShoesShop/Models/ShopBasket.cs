@@ -23,14 +23,11 @@ namespace ShoesShop.Models
         public static ShopBasket GetBasket(IServiceProvider services)
         {
             //Create new session
-            ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session; //for work with sessions
-            var context = services.GetService<DataBaseContent>();//get different tables
+            ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session; 
+            var context = services.GetService<DataBaseContent>();
             string shopBasketId = session.GetString("BasketId") ?? Guid.NewGuid().ToString();
-
-            session.SetString("BasketId", shopBasketId);//new session
-
+            session.SetString("BasketId", shopBasketId);
             return new ShopBasket(context) { ShopBasketId = shopBasketId };
-
         }
 
         public void AddToBasket(Shoes shoes)
@@ -47,7 +44,8 @@ namespace ShoesShop.Models
 
         public List<ShopShoesItem> GetShopItems()
         {
-            return DataBaseContent.ShopShoesItem.Where(item => item.ShopShoesId == ShopBasketId).Include(item => item.Shoes).ToList();
+            return DataBaseContent.ShopShoesItem.Where(item => 
+                item.ShopShoesId == ShopBasketId).Include(item => item.Shoes).ToList();
         }
 
     }

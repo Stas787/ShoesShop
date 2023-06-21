@@ -5,7 +5,8 @@ namespace ShoesShop.Interfaces
 {
     public interface IAllShoes
     {
-        IEnumerable<Shoes> Shoes { get; } //when it is needed to return collcentions of items
+        IEnumerable<Shoes> Shoes { get; }
+
         IEnumerable<Shoes> GetFavoriteShoes { get; }
 
         Shoes GetObjectShoes(int shoesID);

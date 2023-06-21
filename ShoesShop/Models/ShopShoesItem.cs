@@ -5,13 +5,13 @@
     /// </summary>
     public class ShopShoesItem
     {
-        public int Id { get; set; } //id of shoes
+        public int Id { get; set; }
 
         public Shoes Shoes { get; set; }
 
         public decimal Price { get; set; }
 
-        public string ShopShoesId { get; set; } // id of shoes in basket
+        public string ShopShoesId { get; set; } 
 
     }
 }

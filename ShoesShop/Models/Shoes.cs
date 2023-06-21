@@ -4,14 +4,15 @@ namespace ShoesShop.Models
 {
     public class Shoes
     {
-        public int Id { get; set; } // for work with data bases
+        public int Id { get; set; } 
+
         public string Name { get; set; }
 
         public string ShortExposition { get; set; }
 
         public string ExtensiveExposition { get; set; }
 
-        public string Img { get; set; } // url adress of image
+        public string Img { get; set; }
 
         public decimal Price { get; set; }
 

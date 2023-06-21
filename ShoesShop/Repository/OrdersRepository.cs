@@ -6,6 +6,7 @@ namespace ShoesShop.Repository
     public class OrdersRepository : IAllOrders
     {
         private readonly DataBaseContent Content;
+
         private readonly ShopBasket ShopBasket;
 
         public OrdersRepository (DataBaseContent content, ShopBasket shopBasket)
@@ -18,7 +19,6 @@ namespace ShoesShop.Repository
         {
             order.OrderTime = DateTime.Now;
             Content.Order.Add(order);
-
             var items = ShopBasket.ListShopItems;
 
             foreach (var item in items)

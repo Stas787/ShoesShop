@@ -11,6 +11,7 @@ namespace ShoesShop.ViewModels
     public class ShoesListViewModel
     {
         public IEnumerable<Shoes> AllShoes { get; set; }
+
         public string CurrentCategory { get; set; }
     }
 }

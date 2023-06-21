@@ -5,6 +5,7 @@ namespace ShoesShop
     public class DBObjects
     {
         private static Dictionary<string, Category> Category;
+
         public static Dictionary<string, Category> Categories
         {
             get
@@ -14,7 +15,7 @@ namespace ShoesShop
                     var list = new Category[]
                     {
                         new Category { StringName = "Running shoes", Exposition = "For sport and living" },
-                    new Category { StringName  = "Sneakers", Exposition = "Simple, stylish, comfortable "}
+                        new Category { StringName  = "Sneakers", Exposition = "Simple, stylish, comfortable "}
                     };
 
                     Category = new Dictionary<string, Category>();
@@ -85,13 +86,10 @@ namespace ShoesShop
                         IsFavorite = false,
                         Category = Category["Sneakers"]
                     }
-
                     );
             }
+
             content.SaveChanges();
         }
-
-
-
     }
 }
